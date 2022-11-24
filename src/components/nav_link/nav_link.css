@@ -1,4 +1,10 @@
 li {
     list-style: none;
-    margin: 0.5em;
+    padding: 0.5em;
+    background: #EDD0A4;
+    border-radius: 0.75em;
+}
+
+li a {
+    font-size: 1.2em;
 }

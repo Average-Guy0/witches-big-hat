@@ -1,7 +1,21 @@
 .hat {
     display: flex;
+    align-items: center;
+    
+}
+.counter  {
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1.2em;
+    background: #EDD0A4;
+    border-radius: 100%;
+    border: solid #bf8654;
 }
 .hat img {
-    width: 100px;
-    height: 100px;
+    width: 3em;
+    height: 3em;
+    background: #EDD0A4;
+    border-radius: 50%;
+    border: solid #8c5230;
+    
 }

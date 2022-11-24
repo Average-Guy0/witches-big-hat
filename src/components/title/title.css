@@ -1,0 +1,13 @@
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title img {
+    width: 5em;
+    height: 5em;
+}
+.title h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 3.5rem;
+}

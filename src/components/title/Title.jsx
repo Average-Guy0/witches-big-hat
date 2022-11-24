@@ -1,9 +1,13 @@
+import WITCH from "../icons/sorceress.svg";
+import "./title.css"
 
-
-const Title = () => {
+const TITLE = () => {
     return (
-        <h1>Witches Big Hat</h1>
+        <div className="title">
+            <img src={WITCH} alt="" />
+            <h1>The Witch's Big Hat</h1>
+        </div>
     )
 };
 
-export default Title;
+export default TITLE;

@@ -4,10 +4,10 @@ import HAT from "../icons/witch-hat.svg"
 const CARD_WIDGET = ({ children, alt = "" }) => {
     return (
         <div className="hat">
-            <div>
-                <img src={HAT} alt={alt} />
-            </div>
-            <div>
+
+            <img src={HAT} alt={alt} />
+
+            <div className="counter">
                 {children}
             </div>
         </div>

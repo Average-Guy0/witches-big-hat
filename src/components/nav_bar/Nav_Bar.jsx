@@ -9,7 +9,7 @@ import ITEM_LIST_CONTAINER from "../item_list_container/Item_List_Container";
 
 const NAV_BAR = ()=> {
     return (
-        <div className="nav">
+        <div className="nav page-color">
             <TITLE/>
             <ul>
                 <NAV_LINK href="#">Armas</NAV_LINK>
@@ -21,7 +21,7 @@ const NAV_BAR = ()=> {
             </ul>
             <ITEM_LIST_CONTAINER greeting={"Hola Tasha!"}/>
 
-            <CARD_WIDGET>5</CARD_WIDGET>
+            <CARD_WIDGET>314159265359</CARD_WIDGET>
         </div>
     )
 }
