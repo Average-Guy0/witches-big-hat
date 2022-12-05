@@ -1,12 +1,20 @@
 import './App.css';
-
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 import NAV_BAR from './components/nav_bar/Nav_Bar';
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <NAV_BAR/>
-    </div>
+      <Routes>
+        <Route path='/'/>
+        <Route path='/armas'/>
+        <Route path='/armaduras'/>
+        <Route path='/anillos'/>
+        <Route path='/pociones'/>
+        <Route path='/artefactos'/>
+      </Routes>
+    </BrowserRouter>
   )
 };
 

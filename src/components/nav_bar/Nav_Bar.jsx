@@ -16,12 +16,11 @@ const NAV_BAR = ()=> {
                 <NAV_LINK href="#">Armaduras</NAV_LINK>
                 <NAV_LINK href="#">Anillos</NAV_LINK>
                 <NAV_LINK href="#">Pociones</NAV_LINK>
-                <NAV_LINK href="#">Pergaminos</NAV_LINK>
                 <NAV_LINK href="#">Artefactos</NAV_LINK>
             </ul>
             <ITEM_LIST_CONTAINER greeting={"Hola Tasha!"}/>
 
-            <CARD_WIDGET>314159265359</CARD_WIDGET>
+            <CARD_WIDGET>42</CARD_WIDGET>
         </div>
     )
 }
