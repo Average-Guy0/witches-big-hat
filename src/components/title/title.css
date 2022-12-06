@@ -3,6 +3,10 @@
     align-items: center;
 }
 
+.title a{
+    text-decoration: none;
+}
+
 .title img {
     width: 5em;
     height: 5em;
