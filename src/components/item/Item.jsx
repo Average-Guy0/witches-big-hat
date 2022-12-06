@@ -1,7 +1,8 @@
-const ITEM =({item})=> {
+
+const ITEM =({data})=> {
     return(
         <div>
-            <h2>{item.name}</h2>
+            <h2>{data.name}</h2>
         </div>
     )
 }

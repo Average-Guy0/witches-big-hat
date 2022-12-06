@@ -1,7 +1,6 @@
 import ITEM from "../item/Item.jsx"
 
-const ITEM_LIST = ({ data }) => {
-    console.log(data);
+const ITEM_LIST = ({data}) => {
     return (
         <div>
             {
