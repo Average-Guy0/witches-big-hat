@@ -1,20 +1,21 @@
 import ITEM_LIST from "../item_list/Item_List";
 import { React, useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 
 const ITEM_LIST_CONTAINER = () => {
 
-    const [MAGIC_ITEMS, SET_MAGIC_ITEMS] = useState([]);
+    const [magic_items, set_magic_item] = useState([]);
 
     useEffect(() => {
         fetch("http://www.dnd5eapi.co/api/magic-items")
             .then((res) => res.json())
-            .then(SET_MAGIC_ITEMS)
+            .then((arr)=> set_magic_item(arr))
     }, []);
 
     return (
 
-        <ITEM_LIST data={MAGIC_ITEMS} />
+        <ITEM_LIST data={magic_items} />
     )
 };
 

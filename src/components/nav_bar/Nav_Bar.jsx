@@ -11,11 +11,11 @@ const NAV_BAR = ()=> {
         <div className="nav page-color">
             <TITLE/>
             <ul>
-                <li><Link to={"armas"} >Armas</Link></li>
-                <li><Link to={"armaduras"}>Armaduras</Link></li>
-                <li><Link to={"anillos"}>Anillos</Link></li>
-                <li><Link to={"pociones"}>Pociones</Link></li>
-                <li><Link to={"artefactos"}>Artefactos</Link></li>
+                <li><Link to={"/weapon"} >Armas</Link></li>
+                <li><Link to={"/armor"}>Armaduras</Link></li>
+                <li><Link to={"/anillos"}>Anillos</Link></li>
+                <li><Link to={"/pociones"}>Pociones</Link></li>
+                <li><Link to={"/artefactos"}>Artefactos</Link></li>
 
             </ul>
 
