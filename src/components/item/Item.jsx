@@ -1,6 +1,7 @@
 
 import { React } from "react";
 import { Link } from "react-router-dom";
+import  GOLD from "../icons/gold.svg"
 import "./item.css";
 
 const ITEM = ({ data }) => {
@@ -13,8 +14,8 @@ const ITEM = ({ data }) => {
                     <Link to={`/detail/${data.index}`} >
                         <h2>{data.name}</h2>
                         <img src={data.image} alt="" />
-                        <h3>{data.rarity}</h3>
-                        <h4>Price: {data.price}</h4>
+                        <h3>Rarity: {data.rarity}</h3>
+                        <h4>Price: {data.price} <img src={GOLD} alt="" /></h4>
                     </Link>
             }
         </div>

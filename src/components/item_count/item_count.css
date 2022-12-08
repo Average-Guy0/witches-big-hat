@@ -1,0 +1,18 @@
+.count {
+    display: flex;
+    margin: 0 1em;
+}
+.count button {
+    margin: inherit;
+    padding: 0.5em 1em;
+}
+.count span {
+    font-size: larger;
+}
+.add-to-hat {
+    margin: 0.5em;
+}
+.add-to-hat button{
+    padding: 1em;
+    font-size: larger;
+}

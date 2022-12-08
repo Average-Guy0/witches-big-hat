@@ -12,7 +12,7 @@ const ITEM_DETAIL_CONTAINER = () => {
         fetch("/data/catalog.json")
             .then((res) => res.json())
             .then((arr) => set_details(arr.find(item => item.index === object_index)))
-    }, [])
+    }, [object_index])
     return (
         <>
             <ITEM_DETAIL data={details} />
