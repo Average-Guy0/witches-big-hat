@@ -13,9 +13,9 @@ const NAV_BAR = ()=> {
             <ul>
                 <li><Link to={"/weapon"} >Armas</Link></li>
                 <li><Link to={"/armor"}>Armaduras</Link></li>
-                <li><Link to={"/anillos"}>Anillos</Link></li>
-                <li><Link to={"/pociones"}>Pociones</Link></li>
-                <li><Link to={"/artefactos"}>Artefactos</Link></li>
+                <li><Link to={"/ring"}>Anillos</Link></li>
+                <li><Link to={"/potion"}>Pociones</Link></li>
+                <li><Link to={"/artefact"}>Artefactos</Link></li>
 
             </ul>
 

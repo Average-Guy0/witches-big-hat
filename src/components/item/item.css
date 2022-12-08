@@ -2,3 +2,6 @@
     border: solid black;
     margin: 1em;
 }
+.card img {
+    width: 15em;
+}

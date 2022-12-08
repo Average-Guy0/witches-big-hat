@@ -1,13 +1,22 @@
 import ITEM_DETAIL from "../item_detail/Item_Detail";
-import { React,useEffect,useState } from "react";
+import { React, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-const ITEM_DETAIL_CONTAINER =()=>{
+const ITEM_DETAIL_CONTAINER = () => {
 
-    const [data,set_data] = useState({});
+    const { object_index } = useParams();
 
-    return(
+    const [details, set_details] = useState([]);
 
-        <ITEM_DETAIL data={data}/>
+    useEffect(() => {
+        fetch("/data/catalog.json")
+            .then((res) => res.json())
+            .then((arr) => set_details(arr.find(item => item.index === object_index)))
+    }, [])
+    return (
+        <>
+            <ITEM_DETAIL data={details} />
+        </>
     )
 }
 export default ITEM_DETAIL_CONTAINER;
