@@ -19,7 +19,7 @@ const NAV_BAR = ()=> {
 
             </ul>
 
-            <CARD_WIDGET>42</CARD_WIDGET>
+            <Link to={"/cart"}><CARD_WIDGET>42</CARD_WIDGET></Link>
         </div>
     )
 }

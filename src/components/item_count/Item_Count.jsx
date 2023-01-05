@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import "./item_count.css"
 
-const ITEM_COUNT = () => {
+const ITEM_COUNT = ({adding}) => {
 
     const [counter, set_counter] = useState(1)
 
@@ -21,7 +21,7 @@ const ITEM_COUNT = () => {
             </div>
 
             <div className="add-to-hat">
-                <button>Agregar al Sombrero</button>
+                <button onClick={()=>adding(counter)}>Agregar al Sombrero</button>
             </div>
         </>
     )
