@@ -19,7 +19,7 @@ function App() {
           <Route exact path='/' element={<HOME />} />
           <Route exact path='/:category_id' element={<ITEM_LIST_CONTAINER />} />
           <Route exact path="/detail/:object_index" element={<ITEM_DETAIL_CONTAINER />} />
-          <Route excat path="/cart" element={<CART />} />
+          <Route excat path="/hat" element={<CART />} />
         </Routes>
       </CART_PROVIDER>
     </BrowserRouter>

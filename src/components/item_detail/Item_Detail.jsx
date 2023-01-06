@@ -1,5 +1,6 @@
 import ITEM_COUNT from "../item_count/Item_Count";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CART_CONTEXT } from "../../context/Cart_Context";
 import { Link } from "react-router-dom";
 import "./item_detail.css"
 
@@ -7,10 +8,11 @@ const ITEM_DETAIL = ({ data }) => {
 
     const [to_cart, set_to_cart] = useState(false);
 
+    const {add_item} =useContext(CART_CONTEXT)
 
     const adding = (quantity) =>{
-        console.log(quantity);
         set_to_cart(true);
+        add_item(data, quantity);
     }
 
     return (
