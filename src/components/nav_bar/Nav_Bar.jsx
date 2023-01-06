@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 const NAV_BAR = ()=> {
     return (
         <div className="nav page-color">

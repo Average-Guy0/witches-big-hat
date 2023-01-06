@@ -6,6 +6,8 @@ import "./item.css";
 
 const ITEM = ({ data }) => {
 
+
+
     return (
         <div className="card">
             {
