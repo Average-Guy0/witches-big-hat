@@ -8,7 +8,7 @@
         "desc": ["This ceramic jug appears to be able to hold a gallon of liquid and weighs 12 pounds whether full or empty. Sloshing sounds can be heard from within the jug when it is shaken, even if the jug is empty.", "You can  name one liquid(Acid,Basic Poison, Beer, Honey, Mayonnaise, Oil, Vinegar, Water(fresh), Water(salt), Wine)  to cause the jug to produce the chosen liquid. Afterward, you can uncork the jug as an action and pour that liquid out, up to 2 gallons per minute. The maximum amount of liquid the jug can produce depends on the liquid you named.","Once the jug starts producing a liquid, it can't produce a different one, until the next dawn."],
         "image": "https://5e.tools/img/items/DMG/Alchemy%20Jug.jpg",
         "stock": 5,
-        "price" :"200 Gp"
+        "price" :200 
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
         "desc": ["While holding this shield, you can speak its command word to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. The shield remains animated for 1 minute, until you end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free."],
         "image": "https://5e.tools/img/items/DMG/Animated%20Shield.jpg",
         "stock": 4,
-        "price" :"6000 Gp"
+        "price" :6000 
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@
         "desc": ["You can speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra fire damage to any target it hits. The flames last until you speak the command word again or until you drop or sheathe the sword."],
         "image": "https://5e.tools/img/items/DMG/Flame%20Tongue.jpg",
         "stock": 3,
-        "price":"2000 Gp"
+        "price":2000 
     },
     {
         "id": 4,
@@ -41,7 +41,7 @@
         "desc": ["You can breathe underwater for 1 hour after drinking this potion. Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it."],
         "image": "https://5e.tools/img/items/DMG/Potion%20of%20Water%20Breathing.webp",
         "stock": 2,
-        "price" :"100 Gp"
+        "price" :100
     },
     {
         "id": 5,
@@ -52,7 +52,7 @@
         "desc": ["While wearing this ring, you are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type. Creatures can telepathically communicate with you only if you allow it.","You can use an action to cause the ring to become invisible until you use another action to make it visible, until you remove the ring, or until you die.","If you die while wearing the ring, your soul enters it, unless it already houses a soul. You can remain in the ring or depart for the afterlife. As long as your soul is in the ring, you can telepathically communicate with any creature wearing it. A wearer can't prevent this telepathic communication."],
         "image": "https://5e.tools/img/items/DMG/Ring%20of%20Mind%20Shielding.jpg",
         "stock": 1,
-        "price" :"700 Gp"
+        "price" :700
     },
     {
         "id": 6,
@@ -63,6 +63,6 @@
         "desc": ["While wearing this amulet, you are hidden from divination magic. You can't be targeted by such magic or perceived through magical scrying sensors."],
         "image": "https://5e.tools/img/items/DMG/Amulet%20of%20Proof%20against%20Detection%20and%20Location.jpg",
         "stock": 2,
-        "price" :"20000 Gp"
+        "price" :20000
     }
 ]

@@ -1,7 +1,7 @@
 import "./nav_bar.css";
 
 import TITLE from "../title/Title";
-import CARD_WIDGET from "../card_widget/Card_Widget";
+import CART_WIDGET from "../cart_widget/Cart_Widget";
 import { Link } from "react-router-dom";
 
 
@@ -20,7 +20,7 @@ const NAV_BAR = ()=> {
 
             </ul>
 
-            <Link to={"/cart"}><CARD_WIDGET>42</CARD_WIDGET></Link>
+            <Link to={"/hat"}><CART_WIDGET/></Link>
         </div>
     )
 }
