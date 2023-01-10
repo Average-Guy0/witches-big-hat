@@ -25,7 +25,6 @@ const ITEM_DETAIL = ({ data }) => {
                 <>{
                     data.desc?.map(parra => {
                         return (
-                            // no logre descubrir como hacer el key para cada uno de los parrafos
                             <p key={parra}>{parra}</p>
                         )
                     })

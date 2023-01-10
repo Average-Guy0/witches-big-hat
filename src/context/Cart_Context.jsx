@@ -40,8 +40,6 @@ const CART_PROVIDER = ({ children }) => {
         return hat.reduce((accumulator, current_value)=> accumulator + current_value.quantity, 0)
     }
 
-    console.log("carrito:", hat);
-
     return (
         <CART_CONTEXT.Provider value={{
             clear_hat,

@@ -13,7 +13,7 @@ const ITEM = ({ data }) => {
             {
                 Object.keys(data).length === 0 ?
                     <div>conjurando</div> :
-                    <Link to={`/detail/${data.index}`} >
+                    <Link to={`/detail/${data.id}`} >
                         <h2>{data.name}</h2>
                         <img src={data.image} alt="" />
                         <h3>Rarity: {data.rarity}</h3>
