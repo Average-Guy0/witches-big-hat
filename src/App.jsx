@@ -15,6 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <CART_PROVIDER>
+        {/* todo lo que este adentro del cart_provider puede ineteractuar con el context */}
         <NAV_BAR />
         <Routes>
           <Route exact path='/' element={<HOME />} />

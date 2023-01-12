@@ -21,10 +21,12 @@ const ITEM_COUNT = ({adding}) => {
             </div>
 
             <div className="add-to-hat">
-                <button onClick={()=>adding(counter)}>Agregar al Sombrero</button>
+                {/* la funcion adding la trae del padre item_detail_container */}
+                <button onClick={()=>adding(counter)} role="button" >Agregar al Sombrero</button>
             </div>
         </>
     )
 }
 
 export default ITEM_COUNT;
+

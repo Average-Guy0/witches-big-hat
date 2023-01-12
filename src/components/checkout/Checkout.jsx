@@ -8,7 +8,10 @@ const CHECKOUT = () => {
     const [info, set_info] = useState({
         name: "",
         email: "",
-        credit_card: "",
+        card_number: "",
+        card_name: "",
+        card_expiration_date: "",
+        card_cvv: "",
         instructions: ""
     })
 
@@ -55,37 +58,77 @@ const CHECKOUT = () => {
                     <p>your order was successful</p>
                     <p>here is your code: {id}</p>
                 </div>) : (
-                <form onSubmit={handle_finish}>
+
+                <>
+
                     <div>
-                        <label htmlFor="name">Name</label>
-                        <input
-                            name="name"
-                            id="name"
-                            value={info.name}
-                            onChange={change_handler}
-                        />
+                        <p>here are your magic items:</p>
+                        {hat.map(item => <p>{item.name} quantity: {item.quantity}</p>)}
                     </div>
-                    <div>
-                        <label htmlFor="email">Email</label>
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            value={info.email}
-                            onChange={change_handler}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="message">Mensaje</label>
-                        <textarea
-                            name="message"
-                            id="message"
-                            value={info.message}
-                            onChange={change_handler}
-                        ></textarea>
-                    </div>
-                    <button>Send</button>
-                </form>
+
+                    <form onSubmit={handle_finish}>
+                        <div>
+                            <label htmlFor="name">Name:</label>
+                            <input
+                                name="name"
+                                id="name"
+                                value={info.name}
+                                onChange={change_handler} />
+                        </div>
+                        <div>
+                            <label htmlFor="email">Email:</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                value={info.email}
+                                onChange={change_handler} />
+                        </div>
+                        <div>
+                            <div>
+                                <label htmlFor="card_number">Card Number(16 numbers):</label>
+                                <input type="text"
+                                    id="card_number"
+                                    name="card_number"
+                                    pattern="[0-9]{16}"
+                                    value={info.card_number}
+                                    onChange={change_handler} />
+
+                                <label htmlFor="card_name">Name on Card:</label>
+                                <input type="text"
+                                    id="card_name"
+                                    name="card_name"
+                                    value={info.card_name}
+                                    onChange={change_handler} />
+                            </div>
+                            <div>
+                                <label htmlFor="card_expiration_date">Expiration Date:</label>
+                                <input type="month"
+                                    id="card_expiration_date"
+                                    name="card_expiration_date"
+                                    value={info.card_expiration_date}
+                                    onChange={change_handler} />
+
+                                <label htmlFor="card_cvv">CVV(3 numbers):</label>
+                                <input type="number"
+                                    id="card_cvv"
+                                    name="card_cvv"
+                                    pattern="[0-9]{3}"
+                                    value={info.card_cvv}
+                                    onChange={change_handler} />
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="instructions">Instruciones de entrega (opcional):</label>
+                            <textarea
+                                name="instructions"
+                                id="instructions"
+                                value={info.instructions}
+                                onChange={change_handler}></textarea>
+                        </div>
+                        <button>Send</button>
+                    </form>
+                </>
             )}
         </>
     )

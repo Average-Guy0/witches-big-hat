@@ -1,4 +1,5 @@
 import ITEM_LIST from "../item_list/Item_List";
+import CONJURING from "../conjuring/Conjuring";
 import { React, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getFirestore, collection, getDocs } from "firebase/firestore"
@@ -11,6 +12,7 @@ const ITEM_LIST_CONTAINER = () => {
     const { category_id } = useParams();
 
     useEffect(() => {
+        
         const db = getFirestore();
         const item_collection = collection(db, "items");
 
@@ -25,7 +27,7 @@ const ITEM_LIST_CONTAINER = () => {
 
     return (
         <>
-            {magic_items.length === 0 ? <div>Conjurando</div> : <ITEM_LIST data={magic_items} />}
+            {magic_items.length === 0 ? <CONJURING/> : <ITEM_LIST data={magic_items} />}
         </>
     )
 };

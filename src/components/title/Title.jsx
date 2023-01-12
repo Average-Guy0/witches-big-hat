@@ -7,8 +7,6 @@ const TITLE = () => {
         <div className="title">
             <Link to="/"><img src={WITCH} alt="" /></Link>
             <Link to="/"><h1>The Witch's Big Hat</h1></Link>
-            
-            
         </div>
     )
 };

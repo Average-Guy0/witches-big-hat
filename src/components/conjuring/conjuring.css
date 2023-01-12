@@ -1,0 +1,13 @@
+.conjuring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    height: 100vh;
+}
+
+.flame {
+    transform: scaleX(-1);
+    width: 3em;
+    animation: bob 1.5s ease-in-out infinite;
+}

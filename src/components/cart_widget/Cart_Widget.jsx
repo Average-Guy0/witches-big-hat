@@ -11,7 +11,7 @@ const CART_WIDGET = ({ alt = "a witch's hat" }) => {
         <div className="hat">
 
             <img src={HAT} alt={alt} />
-
+            {/* si no hay nada en el carro no se renderiza el contador */}
             {total_quantity() === 0? "" : 
             <div className="counter">
                 <span>{total_quantity()}</span>
