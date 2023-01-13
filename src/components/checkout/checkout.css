@@ -32,6 +32,7 @@ section {
 .check-list p {
     margin: 1em;
     font-size: 1.4rem;
+    display: flex;
 }
 
 .check-list button {

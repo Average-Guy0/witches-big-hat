@@ -2,12 +2,13 @@ import { useContext, useState } from "react";
 import { getFirestore, addDoc, collection } from "firebase/firestore";
 import { CART_CONTEXT } from "../../context/Cart_Context";
 import { Link } from "react-router-dom";
+import  GOLD from "../icons/gold.svg"
 import "./checkout.css"
 
 
 const CHECKOUT = () => {
 
-    const [info, set_info] = useState({
+    const [buyer, set_buyer] = useState({
         name: "",
         email: "",
         card_number: "",
@@ -22,7 +23,7 @@ const CHECKOUT = () => {
     const { hat, total_price, clear_hat } = useContext(CART_CONTEXT);
 
     const order = {
-        info,
+        buyer,
         // no necesito toda la info de los objetos, cosas como la imagen o el index no es importante asi que lo filtro
         items: hat.map(obj => ({
             id: obj.id,
@@ -39,17 +40,24 @@ const CHECKOUT = () => {
 
         const db = getFirestore();
         const user_order = collection(db, "orders")
-        addDoc(user_order, order).then((snapshot) => {
+        // esto es para prevenir que mande con datos vacios
+        const requiredFields = ['name', 'email', 'card_cvv', 'card_expiration_date', 'card_name', 'card_number'];
+        // checkea si alguno de los campos son strings vacios y dispara la alerta
+        if (requiredFields.some(field => buyer[field] === "")) {
+            alert("some fields are missing")
+        } else {
+            addDoc(user_order, order).then((snapshot) => {
 
-            set_id(snapshot.id)
-            clear_hat()
-        })
+                set_id(snapshot.id)
+                clear_hat()
+            })
+        }
 
     }
 
     const change_handler = (event) => {
         const { value, name } = event.target;
-        set_info({ ...info, [name]: value });
+        set_buyer({ ...buyer, [name]: value });
     };
 
     return (
@@ -67,6 +75,7 @@ const CHECKOUT = () => {
                     <div className="check-list">
                         <p>Here are your magic items:</p>
                         {hat.map(item => <p key={item.id}>{item.name} | quantity: {item.quantity}</p>)}
+                        <p>Total: {total_price()} <img src={GOLD} alt="gold piece" className="gold" /></p> 
                         <Link to="/hat"><button>return to Hat</button></Link>
                     </div>
 
@@ -76,7 +85,7 @@ const CHECKOUT = () => {
                             <input
                                 name="name"
                                 id="name"
-                                value={info.name}
+                                value={buyer.name}
                                 onChange={change_handler} />
                         </div>
                         <div>
@@ -85,7 +94,7 @@ const CHECKOUT = () => {
                                 type="email"
                                 name="email"
                                 id="email"
-                                value={info.email}
+                                value={buyer.email}
                                 onChange={change_handler} />
                         </div>
                         <div>
@@ -95,14 +104,14 @@ const CHECKOUT = () => {
                                     id="card_number"
                                     name="card_number"
                                     pattern="[0-9]{16}"
-                                    value={info.card_number}
+                                    value={buyer.card_number}
                                     onChange={change_handler} />
 
                                 <label htmlFor="card_name">Name on Card:</label>
                                 <input type="text"
                                     id="card_name"
                                     name="card_name"
-                                    value={info.card_name}
+                                    value={buyer.card_name}
                                     onChange={change_handler} />
                             </div>
                             <div className="card-2">
@@ -110,7 +119,7 @@ const CHECKOUT = () => {
                                 <input type="month"
                                     id="card_expiration_date"
                                     name="card_expiration_date"
-                                    value={info.card_expiration_date}
+                                    value={buyer.card_expiration_date}
                                     onChange={change_handler} />
 
                                 <label htmlFor="card_cvv">CVV(3 numbers):</label>
@@ -118,7 +127,7 @@ const CHECKOUT = () => {
                                     id="card_cvv"
                                     name="card_cvv"
                                     pattern="[0-9]{3}"
-                                    value={info.card_cvv}
+                                    value={buyer.card_cvv}
                                     onChange={change_handler} />
                             </div>
                         </div>
@@ -127,7 +136,7 @@ const CHECKOUT = () => {
                             <textarea
                                 name="instructions"
                                 id="instructions"
-                                value={info.instructions}
+                                value={buyer.instructions}
                                 onChange={change_handler}></textarea>
                         </div>
                         <button>Send</button>

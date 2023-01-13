@@ -7,6 +7,10 @@
     text-align: center;
 }
 
+.hat-details p {
+    display: flex;
+}
+
 .empty-hat {
     display: grid;
     place-items: center;

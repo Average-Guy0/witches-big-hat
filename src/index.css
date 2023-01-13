@@ -61,6 +61,11 @@ button:active {
     color: #fff;
 }
 
+.gold {
+    margin: 0 0.3em;
+    height: 1.2em;
+}
+
 /* animations */
 
 @keyframes bob {

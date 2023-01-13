@@ -3,6 +3,7 @@ import CONJURING from "../conjuring/Conjuring";
 import { useState, useContext } from "react";
 import { CART_CONTEXT } from "../../context/Cart_Context";
 import { Link } from "react-router-dom";
+import GOLD from "../icons/gold.svg"
 import "./item_detail.css"
 
 const ITEM_DETAIL = ({ data }) => {
@@ -34,14 +35,14 @@ const ITEM_DETAIL = ({ data }) => {
                                     )
                                 })
                             }</>
-                            <p>Price: {data.price}</p>
+                            <p>Price: {data.price} <img src={GOLD} alt="gold piece" className="gold" /></p>
                             <p>we have {data.stock} units in stock</p>
                             {
                                 // si to_cart es true entonces pones terminar compra
                                 to_cart ?
                                     <>
-                                        <Link to="/hat"><button>Go to Hat</button></Link>
                                         <Link to="/"><button>Back Home</button></Link>
+                                        <Link to="/hat"><button>Go to Hat</button></Link>
                                     </>
                                     : <ITEM_COUNT adding={adding} stock={data.stock} />
                             }

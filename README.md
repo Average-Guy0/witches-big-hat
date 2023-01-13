@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# The Witch's Big Hat
+## ¿Qué es?: The Witch's Big Hat es un 
+E-commerce de fantasía basado en ítems mágicos del TRPG Dungeons and Dragons (específicamente su quinta edición). Contiene detalles sobre varios objetos mágicos con su respectivo precio en piezas de oro (moneda en el juego). Funciona a través de una base de datos de la cual traemos las descripciones, link a imágenes etc. está construida con React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Documentacion
 
-In the project directory, you can run:
+## librería
+React-router-dom (para la navegación web)
 
-### `npm start`
+## Base de datos 
+Firebase (FireStore para la base de datos, es una base de datos noSQL. Proveída por Google).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Fuentes
+Tangerine y Macondo (de google fonts)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Composicion
+##### Como esta construida en React, tiene una estructura definida.
+- un archivo index.html donde los links a las fuentes 
+- un archivo index.js donde instalamos Firebase e importa el archivo App 
+- el archivo App.jsx que posee todas las rutas para la navegación y varios componentes como también el contexto que se aplica por el componente Context_Provider 
+- una carpeta llamada **components** que tiene varias *sub* carpetas con archivos .jsx y .css para la estructura y el estilado 
+- una carpeta llamada context que posee el contexto del carro (llamado en el código como Hat)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tipos de Notación
 
-### `npm run build`
+personalmente, odio el camel case, así que lo evito cuando puedo, hay excepciones como el caso de métodos ya definido u hooks definidos por ejemplo **useEffect** o **useContext**. Así que mi código tiene a usar varias convenciones. La más llamativa es screaming snake case, desde que me entere de que React la recomendaba al igual que pascal case me cambien inmediatamente y estoy bastante feliz. Pero para que quede claro:
+ - camelCase para cosas ya definidas(useEffect) 
+ -  kebab-case para las clases en css (grid-container) 
+ -  snake_case para nombrar las carpetas y archivos css (cart_item), los archivos .jsx de los componentes los escribo como combinación de pascalcase y snake case (Nav_Bar) 
+ -  y SREAMING_SNAKE_CASE para componentes (<ITEM_DETAIL/>)
+ 
+ 
+![SCREAMING_SNAKE_CASE LOGO](https://fission.codes/assets/images/ZWsUMq-8C096C0B-02E9-4D21-9549-C51BAF112341.png "long live the snake!!!")
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Notas adicionales
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- en el código yo menciono Hat como el Carrito, la razón es porque me parece más temáticamente apropiado para una tienda de brujas. Así que cuando veas un array llamado Hat, significa que es el carrito. también lo hago en la página ir al carrito por ir al sombrero. 
+-  también hice la página en inglés, por dos razones: 
+ 1. me siento más cómodo hablando en inglés 
+ 2. la información que traigo de los items no está en español, y para no traducirla la deje en inglés
