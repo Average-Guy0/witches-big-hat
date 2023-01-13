@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { getFirestore, addDoc, collection } from "firebase/firestore";
 import { CART_CONTEXT } from "../../context/Cart_Context";
 import { Link } from "react-router-dom";
-import  GOLD from "../icons/gold.svg"
+import GOLD from "../icons/gold.svg"
 import "./checkout.css"
 
 
@@ -75,7 +75,7 @@ const CHECKOUT = () => {
                     <div className="check-list">
                         <p>Here are your magic items:</p>
                         {hat.map(item => <p key={item.id}>{item.name} | quantity: {item.quantity}</p>)}
-                        <p>Total: {total_price()} <img src={GOLD} alt="gold piece" className="gold" /></p> 
+                        <p>Total: {total_price()} <img src={GOLD} alt="gold piece" className="gold" /></p>
                         <Link to="/hat"><button>return to Hat</button></Link>
                     </div>
 

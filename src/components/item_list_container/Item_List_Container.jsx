@@ -12,7 +12,7 @@ const ITEM_LIST_CONTAINER = () => {
     const { category_id } = useParams();
 
     useEffect(() => {
-        
+
         const db = getFirestore();
         const item_collection = collection(db, "items");
 
@@ -27,7 +27,7 @@ const ITEM_LIST_CONTAINER = () => {
 
     return (
         <>
-            {magic_items.length === 0 ? <CONJURING/> : <ITEM_LIST data={magic_items} />}
+            {magic_items.length === 0 ? <CONJURING /> : <ITEM_LIST data={magic_items} />}
         </>
     )
 };

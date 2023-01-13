@@ -2,7 +2,7 @@
     border: solid;
     margin: 1em 0;
     display: flex;
-background-color:white;
+    background-color: white;
 }
 
 .hat_card img {
@@ -16,7 +16,7 @@ background-color:white;
     justify-content: center;
 }
 
-.hat-info p{
+.hat-info p {
     padding: 0.5em;
     font-weight: 600;
     text-decoration: underline;

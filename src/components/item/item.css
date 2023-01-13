@@ -12,15 +12,18 @@
     justify-content: center;
 
 }
-.card h4 img{
+
+.card h4 img {
     width: 2em;
     margin: 0 1em;
 }
+
 .card img {
     width: 15em;
     margin-left: auto;
     margin-right: auto;
 }
+
 .card a {
     text-decoration: none;
     color: black;

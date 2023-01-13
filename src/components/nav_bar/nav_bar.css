@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.nav a{
+.nav a {
     text-decoration: none;
     color: black;
 }
@@ -19,6 +19,7 @@ li {
     list-style: none;
 
 }
+
 li img {
     height: 1.3em;
     display: inline;
@@ -31,7 +32,7 @@ li a {
     color: #401F0D;
 }
 
-li a:hover{
+li a:hover {
     background: #EDD0A4;
     border-radius: 0.75em;
 }

@@ -14,7 +14,7 @@ const CART_PROVIDER = ({ children }) => {
 
     const remove_item = (id) => set_hat(hat.filter(item => item.id !== id));
 
-    const add_item =(new_item, new_quantity)=> {
+    const add_item = (new_item, new_quantity) => {
         let new_hat = [];
         // con esto busco si el nuevo item esta en el carro
         let item = hat.find(old_item => old_item.id === new_item.id);
@@ -25,19 +25,19 @@ const CART_PROVIDER = ({ children }) => {
             new_hat = [...hat]
         } else {
             // si no esta el item lo creo con la nueva cantidad y lo agrego al con el viejo carrito a uno nuevo
-            item = {...new_item, quantity: new_quantity}
-            new_hat= [...hat, item]
+            item = { ...new_item, quantity: new_quantity }
+            new_hat = [...hat, item]
         }
         // y finalmente lo seteo al carrito
         set_hat(new_hat)
     }
 
-    const total_price =()=> {
-        return hat.reduce((accumulator, current_value)=> accumulator+ current_value.quantity * current_value.price, 0);
+    const total_price = () => {
+        return hat.reduce((accumulator, current_value) => accumulator + current_value.quantity * current_value.price, 0);
     }
 
-    const total_quantity =()=> {
-        return hat.reduce((accumulator, current_value)=> accumulator + current_value.quantity, 0)
+    const total_quantity = () => {
+        return hat.reduce((accumulator, current_value) => accumulator + current_value.quantity, 0)
     }
 
     return (

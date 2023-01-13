@@ -11,10 +11,10 @@ import ARTEFACT from "../icons/crystal.svg"
 
 
 
-const NAV_BAR = ()=> {
+const NAV_BAR = () => {
     return (
         <div className="nav page-color">
-            <TITLE/>
+            <TITLE />
             <ul>
                 <li><Link to={"/weapon"}> <img src={SWORD} alt="" /> Weapons</Link></li>
                 <li><Link to={"/armor"}> <img src={ARMOR} alt="" /> Armor</Link></li>
@@ -24,7 +24,7 @@ const NAV_BAR = ()=> {
 
             </ul>
 
-            <Link to={"/hat"}><CART_WIDGET/></Link>
+            <Link to={"/hat"}><CART_WIDGET /></Link>
         </div>
     )
 }

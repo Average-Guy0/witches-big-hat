@@ -1,7 +1,7 @@
 
 import { React } from "react";
 import { Link } from "react-router-dom";
-import  GOLD from "../icons/gold.svg"
+import GOLD from "../icons/gold.svg"
 import "./item.css";
 
 const ITEM = ({ data }) => {

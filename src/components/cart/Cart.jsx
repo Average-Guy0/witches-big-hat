@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CART_CONTEXT } from "../../context/Cart_Context";
 import CART_ITEM from "../cart_item/Cart_Item";
-import  GOLD from "../icons/gold.svg"
+import GOLD from "../icons/gold.svg"
 import { Link } from "react-router-dom";
 import "./cart.css"
 

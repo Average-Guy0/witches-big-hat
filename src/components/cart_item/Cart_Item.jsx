@@ -1,11 +1,11 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import { CART_CONTEXT } from "../../context/Cart_Context";
-import  GOLD from "../icons/gold.svg"
+import GOLD from "../icons/gold.svg"
 import "./cart_item.css"
 
-const CART_ITEM =({item})=>{
+const CART_ITEM = ({ item }) => {
 
-const {remove_item}= useContext(CART_CONTEXT)
+    const { remove_item } = useContext(CART_CONTEXT)
 
     return (
         <div className="hat_card">
@@ -15,7 +15,7 @@ const {remove_item}= useContext(CART_CONTEXT)
                 <p>Quantity: {item.quantity}</p>
                 <p>Price: {item.price} <img src={GOLD} alt="gold piece" className="gold" /></p>
                 <p>Subtotal: {item.quantity * item.price} <img src={GOLD} alt="gold piece" className="gold" /></p>
-                <button onClick={()=> remove_item(item.id)}>Discard</button>
+                <button onClick={() => remove_item(item.id)}>Discard</button>
             </div>
         </div>
     )
