@@ -23,3 +23,7 @@
 .detail p {
     margin: 0.25em 5em;
 }
+
+.detail button{
+    margin: 0.2em 0;
+}

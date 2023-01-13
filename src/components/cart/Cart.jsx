@@ -10,18 +10,18 @@ const CART = () => {
 
     if (hat.length === 0) {
         return (
-            <div>nothing</div>
+            <div className="empty-hat">
+                <p>Looks like your hat is empty</p>
+                <Link to="/"><button>Return home</button></Link>
+            </div>
         )
     } else {
         return (
             <div className="hat-details">
-                <div className="hat-list">
                 {hat.map(item => <CART_ITEM key={item.id} item={item} />)}
-                </div>
                 <p>total: {total_price()}</p>
                 <button onClick={() => clear_hat()}>Clear the entire hat</button>
                 <Link to='/checkout'><button>Finish Order</button></Link>
-
             </div>
         )
     }

@@ -5,9 +5,15 @@
 .count button {
     margin: inherit;
     padding: 0.5em 1em;
+
+    font-weight: 900;
+    font-size: 1.2rem;
 }
 .count span {
     font-size: larger;
+    border: solid 0.1em;
+    border-radius: 50%;
+    padding: 0.5em 1em;
 }
 .add-to-hat {
     margin: 0.5em;

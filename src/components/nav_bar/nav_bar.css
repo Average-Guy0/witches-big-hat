@@ -12,7 +12,11 @@
 
 li {
     list-style: none;
-    
+
+}
+li img {
+    height: 1.3em;
+    display: inline;
 }
 
 li a {

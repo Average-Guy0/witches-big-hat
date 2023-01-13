@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { getFirestore, addDoc, collection } from "firebase/firestore";
 import { CART_CONTEXT } from "../../context/Cart_Context";
+import { Link } from "react-router-dom";
+import "./checkout.css"
 
 
 const CHECKOUT = () => {
@@ -54,19 +56,21 @@ const CHECKOUT = () => {
         <>
             {/* cuando el tipo de id no es undefined muestra que se termino la compra */}
             {typeof id !== "undefined" ? (
-                <div>
-                    <p>your order was successful</p>
-                    <p>here is your code: {id}</p>
+                <div className="sended">
+                    <p>Your order was successful</p>
+                    <p>Here is your code: {id}</p>
+                    <Link to="/"><button>Return Home</button></Link>
                 </div>) : (
 
-                <>
 
-                    <div>
-                        <p>here are your magic items:</p>
-                        {hat.map(item => <p>{item.name} quantity: {item.quantity}</p>)}
+                <section>
+                    <div className="check-list">
+                        <p>Here are your magic items:</p>
+                        {hat.map(item => <p key={item.id}>{item.name} | quantity: {item.quantity}</p>)}
+                        <Link to="/hat"><button>return to Hat</button></Link>
                     </div>
 
-                    <form onSubmit={handle_finish}>
+                    <form className="check-form" onSubmit={handle_finish}>
                         <div>
                             <label htmlFor="name">Name:</label>
                             <input
@@ -85,7 +89,7 @@ const CHECKOUT = () => {
                                 onChange={change_handler} />
                         </div>
                         <div>
-                            <div>
+                            <div className="card-1">
                                 <label htmlFor="card_number">Card Number(16 numbers):</label>
                                 <input type="text"
                                     id="card_number"
@@ -101,7 +105,7 @@ const CHECKOUT = () => {
                                     value={info.card_name}
                                     onChange={change_handler} />
                             </div>
-                            <div>
+                            <div className="card-2">
                                 <label htmlFor="card_expiration_date">Expiration Date:</label>
                                 <input type="month"
                                     id="card_expiration_date"
@@ -118,8 +122,8 @@ const CHECKOUT = () => {
                                     onChange={change_handler} />
                             </div>
                         </div>
-                        <div>
-                            <label htmlFor="instructions">Instruciones de entrega (opcional):</label>
+                        <div className="instructions">
+                            <label htmlFor="instructions">Delivery instructions (Optional):</label>
                             <textarea
                                 name="instructions"
                                 id="instructions"
@@ -128,7 +132,9 @@ const CHECKOUT = () => {
                         </div>
                         <button>Send</button>
                     </form>
-                </>
+                </section>
+
+
             )}
         </>
     )

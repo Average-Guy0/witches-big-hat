@@ -2,24 +2,18 @@
     display: grid;
     place-items: center;
 
-
-
     margin: 2em 0;
 
     text-align: center;
 }
 
-.hat-list {
-    border: solid;
-    border-radius: 10%;
-    padding: 1em;
+.empty-hat {
+    display: grid;
+    place-items: center;
+    margin: 5em;
+    font-size: 2em;
 }
 
-.hat-list p{
-    margin: 1em 0;
-}
-
-.hat-list img {
-    margin-left: auto;
-    margin-right: auto;
+.empty-hat button{
+    margin: 2em;
 }

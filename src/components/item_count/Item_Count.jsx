@@ -1,15 +1,19 @@
 import { React, useState } from "react";
 import "./item_count.css"
 
-const ITEM_COUNT = ({adding}) => {
+const ITEM_COUNT = ({ adding, stock }) => {
 
     const [counter, set_counter] = useState(1)
 
     const up = () => {
-        set_counter(counter + 1)
+        if (counter < stock) {
+            set_counter(counter + 1)
+        }
     }
     const down = () => {
-        set_counter(counter - 1)
+        if (counter > 1) {
+            set_counter(counter - 1)
+        }
     }
 
     return (
@@ -22,7 +26,7 @@ const ITEM_COUNT = ({adding}) => {
 
             <div className="add-to-hat">
                 {/* la funcion adding la trae del padre item_detail_container */}
-                <button onClick={()=>adding(counter)} role="button" >Agregar al Sombrero</button>
+                <button onClick={() => adding(counter)}>Add to Hat</button>
             </div>
         </>
     )
